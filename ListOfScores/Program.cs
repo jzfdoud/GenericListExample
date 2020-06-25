@@ -7,6 +7,36 @@ namespace ListOfScores
     {
         static void Main(string[] args)
         {
+            static void RunSimFields()
+            {
+                var accounts = new Dictionary<int, Account>();
+
+                var acct1 = new Account
+                {
+                    AccountNumber = 1,
+                    Description = "1st Account",
+                    Balance = 1000
+                };
+                var acct2 = new Account
+                {
+                    AccountNumber = 2,
+                    Description = "2nd Account",
+                    Balance = 2000
+                }; var acct3 = new Account
+                {
+                    AccountNumber = 3,
+                    Description = "3rd Account",
+                    Balance = 3000
+                };
+                //fuzzy what this is doing, adding to dictionary?
+                accounts.Add(acct1.AccountNumber, acct1);
+                accounts.Add(acct2.AccountNumber, acct2); 
+                accounts.Add(acct3.AccountNumber, acct3);
+
+                var selectedAccount = accounts[3];
+            }
+        static void RunListOfNumbers() {
+
             var scores = new List<int>();
             //generic list of type-int... calling constructors?
             scores.Add(42);
@@ -31,7 +61,7 @@ namespace ListOfScores
             }
             Console.WriteLine($"Total is {Total}.");
 
-
+        }
         }
     }
 }
